@@ -1,0 +1,23 @@
+{% extends 'testapp/base.html' %}
+    {% block body_block %}
+        <h1>Beer List Information</h1><hr>
+        <table border=2>
+            <thead>
+                <th>Beer Name</th>
+                <th>Details</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            {% for beer in beer_list %}
+                <tr>
+                    <td>{{beer.name}}</td>
+                    <td><a class="btn btn-succes" href="/detail/{{beer.id}}">Details</a></td>
+                    <td><a class="btn btn-succes" href="/update/{{beer.id}}">Update</a></td>
+                    <td><a class="btn btn-succes" href="/delete/{{beer.id}}">Delete</a></td>
+                    
+                </tr>
+                {% endfor %}
+        </table>
+            <br><br>
+            <a class="btn btn-primary btn-lg" href="/create">Add New Beer</a>
+    {% endblock %}

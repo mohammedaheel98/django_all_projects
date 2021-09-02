@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(255, 251, 6);
+    color: rgb(219, 25, 25);
+    text-align: center;
+}
+h1{
+    border: 5px solid royalblue;
+}
+img{
+    border: 10px groove rgb(238, 18, 18);
+    width: 35%;
+    height: 400px;
+}

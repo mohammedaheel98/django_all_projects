@@ -1,0 +1,9 @@
+{% extends 'testapp/base.html' %}
+    {% block body_block %}
+        <h1>{{beer.name|title}} Beer Information</h1><hr>
+        <ul>
+            <li>Taste: {{beer.taste}}</li>
+            <li>Color: {{beer.color}}</li>
+            <li>Price: {{beer.price}}</li>
+        </ul>
+    {% endblock %}

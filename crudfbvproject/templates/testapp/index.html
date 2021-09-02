@@ -1,0 +1,26 @@
+{% extends 'testapp/base.html' %}
+    {% block body_block %}
+    <div class="container" align="center">
+        <h1>Employee Information Details</h1><hr>
+        <table border=2>
+            <thead>
+                <th>Employee no</th>
+                <th>Employee Name</th>
+                <th>Employee salary</th>
+                <th>Employee city</th>
+                <th>Actions</th>
+            </thead>
+            {% for employee in employees %}
+            <tr>
+                <td>{{employee.eno}}</td>
+                <td>{{employee.ename}}</td>
+                <td>{{employee.esal}}</td>
+                <td>{{employee.eaddr}}</td>
+                <td><a href="update/{{employee.id}}">update</a>&nbsp<a href="/delete/{{employee.id}}">delete</a></td>
+            </tr>
+            {% endfor %}
+        </table><br><br>
+        <a href="/create" class="btn btn-success btn-lg">Insert new employee</a>
+    </div>
+    {% endblock %}
+   
